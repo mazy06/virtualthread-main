@@ -22,7 +22,7 @@ public class HomeController {
     public String home(@PathVariable Integer seconds){
         //call the blocking application
         ResponseEntity<Void> result = restClient.get()
-                .uri("/block/" + seconds)
+                .uri(STR."/block/\{seconds}")
                 .retrieve()
                 .toBodilessEntity();
 
